@@ -25,16 +25,19 @@ function viewCart() {
   }
   for (var i = 0; i < cart.length; i++) {
     var itemNPriceObj = cart[i];
+    priceNItem.push(`${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}`);
+  
+    if (cart.length === 1) {
+      return `In your cart, you have ${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}.`;
+  
+    } else if(cart.length === 2) {
+      return "In your cart, you have " + priceNItem.join(', and ') + '.';
 
-    if (itemNPriceObj !== cart[cart.length - 1]) {
-
-      priceNItem.push(`${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}`);
-    } else {
-
-      priceNItem.push(`and ${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}`);
+    } else if (cart.length > 2) {
+      return ""
     }
   }
-   return "In your cart, you have " + priceNItem.join(', ') + '.';
+  
 }
 
 function total() {
