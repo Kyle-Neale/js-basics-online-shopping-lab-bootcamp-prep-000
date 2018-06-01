@@ -1,12 +1,8 @@
 var cart = [];
 
 function getCart(item) {
-  var itemNPrice = {
-    'itemName': item,
-    'itemPrice': Math.floor(Math.random() * 100) + 1
-  }
-  cart.push(itemNPrice);
- return cart, `${item} was added to the cart.`;
+
+ return cart
 }
 
 function setCart(c) {
@@ -15,7 +11,12 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  var itemNPrice = {
+    'itemName': item,
+    'itemPrice': Math.floor(Math.random() * 100) + 1
+  }
+  cart.push(itemNPrice);
+  return `${item} was added to the cart.`;
 }
 
 function viewCart() {
@@ -29,9 +30,11 @@ function viewCart() {
     priceNItem.push(`${itemNPriceObj.itemName} at ${itemNPriceObj.itemPrice}, and `);
   }
   if (cart.length === 1) {
-    return `In your cart, you have ${itemNPriceObj.itemName} at ${itemNPriceObj.itemPrice}.`
+    return `In your cart, you have ${itemNPriceObj.itemName} at ${itemNPriceObj.itemPrice}.`;
+    
   } else {
-    return "In your cart, you have " + priceNItem.join('')
+    return "In your cart, you have " + priceNItem.join('');
+    
   }
 }
 
