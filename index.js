@@ -37,7 +37,7 @@ function viewCart() {
   }
 }
 
-var sum = function total() {
+function total() {
   var sum = 0;
   for (var i = 0; i < cart.length; i++) {
     var itemNPriceObj = cart[i];
@@ -50,17 +50,17 @@ function removeFromCart(item) {
   for (var i = 0; i < cart.length; i++) {
     var itemNPriceObj = cart[i];
     if (itemNPriceObj.itemName === item) {
-      cart.splice(i, 1);
+      cart.splice(i,1)
       return cart;
     }
   }
-  return "That item is not in your cart.";
+  return "That item is not in your cart."
 }
 
 function placeOrder(cardNumber) {
   if (!cardNumber) {
     return "Sorry, we don't have a credit card on file for you."
   } else {
-    return `Your total cost is $${sum}, which will be charged to the card ${cardNumber}.`
+    return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
   }
 }
