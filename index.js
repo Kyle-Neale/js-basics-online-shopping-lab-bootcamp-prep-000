@@ -51,9 +51,10 @@ function removeFromCart(item) {
   for (var i = 0; i < cart.length; i++) {
     var itemNPriceObj = cart[i];
     if (itemNPriceObj.values().includes(item)) {
-      delete
+      
     }
   }
+  return "That item is not in your cart."
 }
 
 function placeOrder(cardNumber) {
