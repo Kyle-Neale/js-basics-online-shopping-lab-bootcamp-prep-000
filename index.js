@@ -26,8 +26,8 @@ function viewCart() {
   }
   for (var i = 0; i < cart.length; i++) {
     var itemNPriceObj = cart[i];
-    
     priceNItem.push(`${itemNPriceObj.itemName} $${itemNPriceObj.itemPrice}`);
+    
   }
   if (cart.length === 1) {
     return `In your cart, you have ${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}.`;
@@ -42,8 +42,10 @@ function viewCart() {
 function total() {
   var sum = 0;
   for (var i = 0; i < cart.length; i++) {
-    var 
+    var itemNPriceObj = cart[i];
+    sum += itemNPriceObj.itemPrice
   }
+  return sum;
 }
 
 function removeFromCart(item) {
