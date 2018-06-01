@@ -48,7 +48,10 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for
+  for (var i = 0; i < cart.length; i++) {
+    var itemNPriceObj = cart[i];
+    if (itemNPriceObj.values()[item])
+  }
 }
 
 function placeOrder(cardNumber) {
