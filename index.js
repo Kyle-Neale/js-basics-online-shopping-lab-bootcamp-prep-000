@@ -2,9 +2,9 @@ var cart = [];
 
 function getCart(item) {
   var itemNPrice = {
-    'itemName': item.
-    'itemPrice': Math.floor(Math.random())
-  };
+    'itemName': item,
+    'itemPrice': Math.floor((Math.random() + 1) * 100)
+  }
  return cart;
 }
 
