@@ -15,7 +15,7 @@ function addToCart(item) {
     'itemPrice': Math.floor(Math.random() * 100) + 1
   }
   cart.push(itemNPrice);
-  return `${item} has been added to your cart.`;
+  return `${item} was added to the cart.`;
 }
 
 function viewCart() {
@@ -30,10 +30,13 @@ function viewCart() {
   }
   if (cart.length === 1) {
     return `In your cart, you have ${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}.`;
-    
-  } else {
-    return "In your cart, you have " + priceNItem.join(', ') + '.';
-    
+  
+  } else if(cart.length === 2) {
+    return "In your cart, you have " + priceNItem.join(', and ') + '.';
+
+  } else if (cart.length > 2) {
+    return ""
+
   }
 }
 
@@ -61,7 +64,6 @@ function placeOrder(cardNumber) {
   if (!cardNumber) {
     return "Sorry, we don't have a credit card on file for you."
   } else {
-    cart = [];
     return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
   }
 }
