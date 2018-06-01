@@ -27,7 +27,7 @@ function viewCart() {
     var itemNPriceObj = cart[i];
     
     priceNItem.push(`${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}`);
-  }
+  
   if (cart.length === 1) {
     return `In your cart, you have ${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}.`;
   
@@ -37,7 +37,7 @@ function viewCart() {
   } else if (cart.length > 2) {
     return ""
 
-  }
+  }}
 }
 
 function total() {
