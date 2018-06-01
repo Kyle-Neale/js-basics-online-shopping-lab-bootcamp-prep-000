@@ -32,7 +32,7 @@ function viewCart() {
     return `In your cart, you have ${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}.`;
     
   } else {
-    return "In your cart, you have " + priceNItem.join(', and ') + '.';
+    return "In your cart, you have " + priceNItem.join(', ') + '.';
     
   }
 }
