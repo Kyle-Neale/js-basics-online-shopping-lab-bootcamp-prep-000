@@ -5,6 +5,7 @@ function getCart(item) {
     'itemName': item,
     'itemPrice': Math.floor((Math.random() + 1) * 100)
   }
+  cart.push(itemNPrice);
  return cart;
 }
 
