@@ -50,7 +50,9 @@ function total() {
 function removeFromCart(item) {
   for (var i = 0; i < cart.length; i++) {
     var itemNPriceObj = cart[i];
-    if (itemNPriceObj.values().includes(item)) {
+    if (itemNPriceObj.itemName === item) {
+      
+    } else {
       
     }
   }
