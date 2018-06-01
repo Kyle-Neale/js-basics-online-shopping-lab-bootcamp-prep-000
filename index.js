@@ -28,16 +28,17 @@ function viewCart() {
     
     priceNItem.push(`${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}`);
   
-  if (cart.length === 1) {
-    return `In your cart, you have ${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}.`;
+    if (cart.length === 1) {
+      return `In your cart, you have ${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}.`;
   
-  } else if(cart.length === 2) {
-    return "In your cart, you have " + priceNItem.join(', and ') + '.';
+    } else if(cart.length === 2) {
+      return "In your cart, you have " + priceNItem.join(', and ') + '.';
 
-  } else if (cart.length > 2) {
-    return ""
-
-  }}
+    } else if (cart.length > 2) {
+      return ""
+    }
+  }
+  
 }
 
 function total() {
