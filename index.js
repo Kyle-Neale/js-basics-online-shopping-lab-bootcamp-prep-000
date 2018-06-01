@@ -25,8 +25,8 @@ function viewCart() {
   }
   for (var i = 0; i < cart.length; i++) {
     var itemNPriceObj = cart[i];
-    priceNItem.push(`${itemNPriceObj.itemName} $${itemNPriceObj.itemPrice}`);
     
+    priceNItem.push(`${itemNPriceObj.itemName} $${itemNPriceObj.itemPrice}`);
   }
   if (cart.length === 1) {
     return `In your cart, you have ${itemNPriceObj.itemName} at $${itemNPriceObj.itemPrice}.`;
@@ -36,7 +36,6 @@ function viewCart() {
     
   }
 }
-
 
 function total() {
   var sum = 0;
@@ -51,13 +50,13 @@ function removeFromCart(item) {
   for (var i = 0; i < cart.length; i++) {
     var itemNPriceObj = cart[i];
     if (itemNPriceObj.itemName === item) {
-      delete itemNPriceObj
-    } else {
-       return "That item is not in your cart."
+      cart.splice(i, 1);
+      return cart;
     }
   }
+  return "That item is not in your cart.";
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+  if (cardNumber)
 }
